@@ -19,7 +19,7 @@ Netzwerkverbindung (Android: keine `INTERNET`-Berechtigung; Desktop: CSP
 
 Bitte **kein öffentliches Issue** für Sicherheitslücken. Melde sie privat:
 
-- Discord: discord.gg/sp3 (DM an einen Maintainer), oder
+- Discord: https://discord.gg/FbJaSSGtB6 (DM an einen Maintainer), oder
 - GitHub Security Advisory („Report a vulnerability").
 
 Wir antworten so schnell wie möglich und koordinieren eine Offenlegung.
