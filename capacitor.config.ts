@@ -2,7 +2,7 @@ import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
   appId: "dev.sp3.lock",
-  appName: "sp3 Lock",
+  appName: "SP3 Lock",
   webDir: "dist",
   android: {
     backgroundColor: "#141c2a",
