@@ -116,7 +116,7 @@ Keine Netzwerkverbindung — kein Telemetry — kein Account — kein Server.
 > Iterationen) statt Argon2id verwendet. Desktop- und Android-Vaults sind daher
 > nicht gegenseitig kompatibel — jede Plattform liest ihr eigenes Format.
 
-Vulnerability Reports: Discord `discord.gg/sp3` (DM @sp3) oder [SECURITY.md](SECURITY.md)
+Vulnerability Reports: Discord `https://discord.gg/FbJaSSGtB6` (DM @sp3) oder [SECURITY.md](SECURITY.md)
 
 ---
 
@@ -182,7 +182,7 @@ Siehe [CONTRIBUTING.md](CONTRIBUTING.md) für Details.
 
 <div align="center">
 
-Made with ❤️ by [sp3](https://discord.gg/sp3)
+Made with ❤️ by [sp3](https://discord.gg/FbJaSSGtB6)
 
 ⭐ Star das Repo wenn es dir gefällt!
 
