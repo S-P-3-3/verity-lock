@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">sp3 Lock</string>
+    <string name="title_activity_main">sp3 Lock</string>
+    <string name="package_name">dev.sp3.lock</string>
+    <string name="custom_url_scheme">dev.sp3.lock</string>
+</resources>

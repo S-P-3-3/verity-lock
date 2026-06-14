@@ -1,0 +1,74 @@
+/* ===========================================================================
+   sp3 Lock — Android / mobile styles (active when <html class="android">)
+   =========================================================================== */
+
+/* Safe areas (status bar / gesture nav). */
+html.android .app {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Larger touch targets (>= 48dp). */
+html.android .entry-row {
+  min-height: 64px;
+}
+html.android .btn-green,
+html.android .btn-red,
+html.android .btn-ghost {
+  min-height: 52px;
+  font-size: 15px;
+}
+html.android .nav-tab {
+  min-height: 56px;
+}
+html.android .row-copy {
+  width: 44px;
+  height: 44px;
+}
+html.android .mini-icon,
+html.android .val-icon {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Bigger numeric account input on mobile. */
+html.android .account-input {
+  font-size: 28px;
+  letter-spacing: 0.2em;
+}
+
+/* No hover on touch — only active feedback (Material-ish). */
+@media (hover: none) {
+  .entry-row:hover {
+    background: var(--navy-40);
+  }
+  .entry-row:active {
+    background: var(--navy-50);
+  }
+  .pill:hover {
+    border-color: var(--border-20);
+  }
+}
+
+/* Ripple-ish press overlay on primary buttons. */
+html.android .btn-green,
+html.android .btn-red {
+  position: relative;
+  overflow: hidden;
+}
+html.android .btn-green::after,
+html.android .btn-red::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(0);
+  border-radius: inherit;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+html.android .btn-green:active::after,
+html.android .btn-red:active::after {
+  transform: scale(1);
+  opacity: 1;
+}

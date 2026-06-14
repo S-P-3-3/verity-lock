@@ -1,0 +1,13 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#141c2a"/>
+  <rect x="56" y="56" width="400" height="400" rx="84" fill="#1b2535"/>
+  <!-- shackle -->
+  <path d="M186 250 V196 A70 70 0 0 1 326 196 V250"
+        stroke="#44d975" stroke-width="34" fill="none" stroke-linecap="round"/>
+  <!-- body -->
+  <rect x="148" y="246" width="216" height="170" rx="30" fill="#44d975"/>
+  <!-- keyhole -->
+  <circle cx="256" cy="316" r="26" fill="#141c2a"/>
+  <rect x="244" y="314" width="24" height="46" rx="12" fill="#141c2a"/>
+</svg>

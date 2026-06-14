@@ -1,0 +1,196 @@
+/* ===========================================================================
+   sp3 Lock — Settings page + controls
+   =========================================================================== */
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-section {
+  margin-bottom: 12px;
+}
+.section-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-25);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 4px 8px;
+}
+.section-card {
+  background: var(--navy-30);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-10);
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--border-10);
+  min-height: 52px;
+}
+.settings-row:last-child {
+  border-bottom: none;
+}
+.settings-row.tappable {
+  cursor: pointer;
+}
+.settings-row.tappable:active {
+  background: var(--navy-40);
+}
+.row-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-100);
+}
+.row-desc {
+  font-size: 11px;
+  color: var(--text-45);
+  margin-top: 2px;
+}
+.row-value {
+  font-size: 13px;
+  color: var(--text-45);
+}
+
+/* Toggle */
+.toggle {
+  width: 46px;
+  height: 26px;
+  border-radius: 13px;
+  background: var(--navy-50);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.toggle.on {
+  background: var(--green);
+}
+.toggle::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+.toggle.on::after {
+  transform: translateX(20px);
+}
+
+/* Color picker */
+.color-picker {
+  display: flex;
+  gap: 8px;
+}
+.color-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.15s;
+  padding: 0;
+}
+.color-dot.selected {
+  border-color: #fff;
+  transform: scale(1.15);
+}
+
+/* Segmented control */
+.segmented {
+  display: flex;
+  background: var(--navy-40);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 2px;
+}
+.seg-btn {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-45);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.seg-btn.active {
+  background: var(--navy-60);
+  color: var(--text-100);
+}
+
+/* Dropdown */
+.settings-dropdown {
+  background: var(--navy-40);
+  border: 1px solid var(--border-20);
+  border-radius: 8px;
+  color: var(--text-100);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+.settings-dropdown:focus {
+  outline: none;
+  border-color: var(--green);
+}
+.settings-dropdown option {
+  background: var(--navy-20);
+}
+
+/* Slider */
+.settings-slider {
+  width: 130px;
+  accent-color: var(--green);
+  height: 4px;
+  cursor: pointer;
+}
+
+/* Android native file pick area */
+.android-pick-area {
+  background: var(--navy-40);
+  border: 2px dashed var(--border-20);
+  border-radius: 16px;
+  padding: 44px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.18s;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.android-pick-area:active {
+  background: var(--navy-50);
+  border-color: var(--green);
+}
+.pick-icon {
+  font-size: 46px;
+  line-height: 1;
+}
+.pick-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-100);
+}
+.pick-sub {
+  font-size: 13px;
+  color: var(--text-45);
+}

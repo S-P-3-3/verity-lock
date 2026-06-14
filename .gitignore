@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+dist-portable/
+dist-linux/
+dist-android/
+dist-release/
+src-tauri/target/
+
+# Generated icon source
+icons/source-1024.png
+
+# Vault files (never commit!)
+*.sp3vault
+*.sp3vault.bak
+
+# Keystore & signing secrets (never commit!)
+*.keystore
+*.jks
+android/key.properties
+android/release.keystore
+
+# Android build
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/app/src/main/assets/public/
+android/capacitor-cordova-android-plugins/
+
+# OS
+.DS_Store
+Thumbs.db
+*.local
+
+# Env
+.env
+.env.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.sw?
+
+# Logs
+*.log
+npm-debug.log*

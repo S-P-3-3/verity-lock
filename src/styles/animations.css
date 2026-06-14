@@ -1,0 +1,125 @@
+/* ===========================================================================
+   sp3 Lock — animations (shared desktop + Android)
+   =========================================================================== */
+
+/* Smooth global transitions for interactive surfaces. */
+.btn-green,
+.btn-red,
+.btn-ghost,
+.entry-row,
+.pill,
+.input,
+.account-input,
+.nav-tab,
+.row-copy,
+.val-icon,
+.mini-icon,
+.format-card,
+.check,
+.seg button {
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    opacity 0.18s ease,
+    transform 0.12s ease;
+}
+
+/* Entry rows: staggered slide-in on load. */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.entry-row {
+  animation: slideIn 0.22s ease forwards;
+}
+.entry-row:nth-child(1) {
+  animation-delay: 0.02s;
+}
+.entry-row:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.entry-row:nth-child(3) {
+  animation-delay: 0.08s;
+}
+.entry-row:nth-child(4) {
+  animation-delay: 0.11s;
+}
+.entry-row:nth-child(5) {
+  animation-delay: 0.14s;
+}
+.entry-row:nth-child(n + 6) {
+  animation-delay: 0.16s;
+}
+
+/* Button press feedback. */
+.btn-green:active,
+.btn-red:active,
+.btn-ghost:active {
+  transform: scale(0.97);
+}
+
+/* Animated strength bar. */
+.strength-fill {
+  transition:
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s ease;
+}
+
+/* Unlocked vault banner glow. */
+.banner.unlocked {
+  box-shadow: inset 0 0 60px rgba(68, 217, 117, 0.05);
+}
+
+/* Account-number progress bar. */
+.account-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  font-size: 12px;
+  color: var(--text-45, rgba(255, 255, 255, 0.45));
+}
+.account-progress .track {
+  flex: 1;
+  height: 6px;
+  border-radius: 4px;
+  background: var(--navy-30, #213044);
+  overflow: hidden;
+}
+.account-progress .fill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--green);
+  box-shadow: 0 0 10px var(--green-glow, rgba(68, 217, 117, 0.08));
+  transition: width 0.2s ease;
+}
+
+/* Blink caret hint on the account display when focused & complete. */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(68, 217, 117, 0.12);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(68, 217, 117, 0.28);
+  }
+}
+.account-input:focus {
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+/* Small per-entry strength dot. */
+.strength-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
