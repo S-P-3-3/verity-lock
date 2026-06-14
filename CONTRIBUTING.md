@@ -39,4 +39,4 @@ cd android && ./gradlew assembleDebug
 
 ## Kontakt
 
-Discord: discord.gg/sp3
+Discord: https://discord.gg/FbJaSSGtB6
