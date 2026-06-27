@@ -34,7 +34,7 @@ export function Topbar({ onBack, title, rightIcon, onRight, onSettings, onUser }
 
   return (
     <header className="topbar">
-      <div className="logo-badge">s3</div>
+      <div className="logo-badge">V</div>
       <span className="app-name">Verity Lock</span>
       <div className="spacer" />
       {onUser && (
