@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "dev.sp3.lock"
+    namespace "dev.verity.lock"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "dev.sp3.lock"
+        applicationId "dev.verity.lock"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

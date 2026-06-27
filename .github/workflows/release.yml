@@ -48,9 +48,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: ${{ github.ref_name }}
-          releaseName: "sp3 Lock ${{ github.ref_name }}"
+          releaseName: "Verity Lock ${{ github.ref_name }}"
           releaseBody: |
-            **sp3 Lock** — 100% offline password manager, Mullvad-style.
+            **Verity Lock** — 100% offline password manager, Mullvad-style.
             AES-256-GCM + Argon2id · 16-digit account number · no server.
             See the assets below for Windows, Linux and Android builds.
           releaseDraft: false

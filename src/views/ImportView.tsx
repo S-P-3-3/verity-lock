@@ -4,8 +4,8 @@ import { api } from "../api";
 import { useToast } from "../components/Toast";
 import { platform, pickImportContent } from "../utils/platform";
 
-const PENDING_CONTENT = "sp3_pending_import";
-const PENDING_FORMAT = "sp3_pending_format";
+const PENDING_CONTENT = "verity_pending_import";
+const PENDING_FORMAT = "verity_pending_format";
 
 interface Props {
   onImport: (format: string, source: string) => Promise<number>;

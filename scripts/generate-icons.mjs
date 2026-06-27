@@ -1,4 +1,4 @@
-// Renders the sp3 Lock SVG to a 1024×1024 PNG source, then run:
+// Renders the Verity Lock SVG to a 1024×1024 PNG source, then run:
 //   npx tauri icon icons/source-1024.png
 // which generates the full icon set (png sizes + .ico + .icns) into src-tauri/icons.
 import sharp from "sharp";

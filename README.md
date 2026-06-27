@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="sp3 Lock Banner" width="100%">
+<img src="assets/banner.png" alt="Verity Lock Banner" width="100%">
 
 <br/>
 
-<img src="assets/icon.png" width="80" height="80" alt="sp3 Lock Icon">
+<img src="assets/icon.png" width="80" height="80" alt="Verity Lock Icon">
 
-# sp3 Lock
+# Verity Lock
 
 **Open-source password manager — 100% offline, portable, military-grade encryption**
 
@@ -81,11 +81,11 @@
 
 | Plattform | Download | Typ |
 |:---:|:---:|:---:|
-| 🪟 **Windows** | [`sp3-lock_1.0.0_x64-setup.exe`](../../releases/latest) | Installer |
-| 🪟 **Windows** | [`sp3-lock-portable-win.zip`](../../releases/latest) | Portable (USB) |
-| 🐧 **Linux** | [`sp3-lock_1.0.0_amd64.deb`](../../releases/latest) | Debian/Ubuntu |
-| 🐧 **Linux** | [`sp3-lock_1.0.0_amd64.AppImage`](../../releases/latest) | Universal |
-| 🤖 **Android** | [`sp3-lock_1.0.0_android.apk`](../../releases/latest) | APK |
+| 🪟 **Windows** | [`verity-lock_1.0.0_x64-setup.exe`](../../releases/latest) | Installer |
+| 🪟 **Windows** | [`verity-lock-portable-win.zip`](../../releases/latest) | Portable (USB) |
+| 🐧 **Linux** | [`verity-lock_1.0.0_amd64.deb`](../../releases/latest) | Debian/Ubuntu |
+| 🐧 **Linux** | [`verity-lock_1.0.0_amd64.AppImage`](../../releases/latest) | Universal |
+| 🤖 **Android** | [`verity-lock_1.0.0_android.apk`](../../releases/latest) | APK |
 
 </div>
 
@@ -95,7 +95,7 @@
 
 ## 🔒 Security
 
-sp3 Lock speichert **niemals** etwas unverschlüsselt auf der Festplatte.
+Verity Lock speichert **niemals** etwas unverschlüsselt auf der Festplatte.
 
 ```
 vault.sp3vault (binäres Format):
@@ -108,7 +108,7 @@ vault.sp3vault (binäres Format):
 └─────────────────────────────────┘
 ```
 
-**Ohne sp3 Lock + korrekte Kontonummer ist die Vault-Datei nicht lesbar.**
+**Ohne Verity Lock + korrekte Kontonummer ist die Vault-Datei nicht lesbar.**
 
 Keine Netzwerkverbindung — kein Telemetry — kein Account — kein Server.
 
@@ -125,8 +125,8 @@ Vulnerability Reports: Discord `https://discord.gg/FbJaSSGtB6` (DM @sp3) oder [S
 ```bash
 # Voraussetzungen: Rust (stable), Node.js 18+, Tauri CLI
 
-git clone https://github.com/sp3dev/sp3-lock.git
-cd sp3-lock
+git clone https://github.com/S-P-3-3/verity-lock.git
+cd verity-lock
 npm install
 npm run tauri dev        # Entwicklung
 npm run tauri build      # Release-Build
@@ -158,7 +158,7 @@ cd android && ./gradlew assembleRelease
 ## 📁 Ordnerstruktur
 
 ```
-sp3-lock/
+verity-lock/
 ├── src/              React Frontend
 ├── src-tauri/        Rust Backend (Crypto, Vault, Tauri Commands)
 ├── android/          Capacitor Android Projekt
@@ -182,7 +182,7 @@ Siehe [CONTRIBUTING.md](CONTRIBUTING.md) für Details.
 
 <div align="center">
 
-Made with ❤️ by [sp3](https://discord.gg/FbJaSSGtB6)
+Made with ❤️ by [Verity](https://discord.gg/FbJaSSGtB6)
 
 ⭐ Star das Repo wenn es dir gefällt!
 

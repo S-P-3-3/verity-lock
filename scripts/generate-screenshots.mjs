@@ -1,5 +1,5 @@
 // Generates placeholder UI mockups into assets/screenshots/.
-// These mirror the real sp3 Lock UI but are NOT real captures — replace them
+// These mirror the real Verity Lock UI but are NOT real captures — replace them
 // with actual screenshots from the running apps before publishing if you like.
 //   node scripts/generate-screenshots.mjs
 import sharp from "sharp";
@@ -20,7 +20,7 @@ function topbar(w) {
     <rect x="0" y="0" width="${w}" height="54" fill="${C.greenDark}"/>
     <rect x="16" y="12" width="30" height="30" rx="8" fill="rgba(0,0,0,0.18)"/>
     <text x="31" y="32" ${font} font-size="13" font-weight="800" fill="#fff" text-anchor="middle">s3</text>
-    <text x="56" y="33" ${font} font-size="16" font-weight="800" letter-spacing="1.5" fill="#fff">SP3 LOCK</text>`;
+    <text x="56" y="33" ${font} font-size="16" font-weight="800" letter-spacing="1.5" fill="#fff">VERITY LOCK</text>`;
 }
 
 function statusbar(w, y) {

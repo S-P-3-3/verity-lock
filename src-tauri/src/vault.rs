@@ -107,7 +107,7 @@ pub fn parse_header(bytes: &[u8]) -> Result<VaultHeader, String> {
         return Err("vault file is truncated or not a valid .sp3vault".into());
     }
     if &bytes[0..4] != MAGIC {
-        return Err("not a valid sp3 vault (bad magic)".into());
+        return Err("not a valid Verity vault (bad magic)".into());
     }
     if bytes[4] != VERSION {
         return Err(format!("unsupported vault version: {}", bytes[4]));

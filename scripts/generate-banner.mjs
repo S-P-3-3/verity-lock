@@ -27,7 +27,7 @@ const banner = `
   </g>
 
   <text x="420" y="170" font-family="system-ui, sans-serif" font-weight="900" font-size="72"
-        fill="#ffffff" letter-spacing="-2">SP3 Lock</text>
+        fill="#ffffff" letter-spacing="-2">Verity Lock</text>
   <text x="422" y="222" font-family="system-ui, sans-serif" font-weight="600" font-size="24"
         fill="#44d975" letter-spacing="1">Open-source · 100% Offline · AES-256-GCM</text>
 
@@ -41,7 +41,7 @@ const banner = `
   </g>
 
   <text x="1220" y="380" font-family="system-ui" font-size="16" font-weight="700"
-        fill="rgba(255,255,255,0.2)" text-anchor="end">by sp3</text>
+        fill="rgba(255,255,255,0.2)" text-anchor="end">by Verity</text>
 </svg>`;
 
 const icon = `

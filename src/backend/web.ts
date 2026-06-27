@@ -161,16 +161,16 @@ export const webApi: VaultApi = {
     const s = requireSession(token);
     if (format === "sp3vault") {
       const blob = await encryptVault({ entries: s.entries }, s.number);
-      await writeDocument("sp3-export.sp3vault", toBase64(blob));
+      await writeDocument("verity-export.sp3vault", toBase64(blob));
     } else if (format === "csv") {
       const head = "title,username,password,url,notes,category\n";
       const esc = (v: string) => `"${v.replace(/"/g, '""')}"`;
       const body = s.entries
         .map((e) => [e.title, e.username, e.password, e.url, e.notes, e.category].map(esc).join(","))
         .join("\n");
-      await writeDocument("sp3-export.csv", head + body);
+      await writeDocument("verity-export.csv", head + body);
     } else {
-      await writeDocument("sp3-export.json", JSON.stringify({ entries: s.entries }, null, 2));
+      await writeDocument("verity-export.json", JSON.stringify({ entries: s.entries }, null, 2));
     }
   },
 

@@ -1,6 +1,6 @@
 /**
  * Capacitor Filesystem storage for the Android build. The vault lives in the
- * app-private data directory (`Directory.Data` → /data/data/dev.sp3.lock/files),
+ * app-private data directory (`Directory.Data` → /data/data/dev.verity.lock/files),
  * which is inaccessible to other apps without root. Exports go to Documents.
  */
 import { toBase64, fromBase64 } from "./crypto";

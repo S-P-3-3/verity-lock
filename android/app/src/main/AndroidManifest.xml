@@ -35,7 +35,7 @@
         </provider>
     </application>
 
-    <!-- sp3 Lock ist 100% offline: KEINE INTERNET-Berechtigung. -->
+    <!-- Verity Lock ist 100% offline: KEINE INTERNET-Berechtigung. -->
     <!-- Nur für den Datei-Import auf älteren Androids (SAF braucht es ab 33 nicht). -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />

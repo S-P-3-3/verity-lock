@@ -3224,7 +3224,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "sp3-lock"
+name = "verity-lock"
 version = "1.0.0"
 dependencies = [
  "aes-gcm",

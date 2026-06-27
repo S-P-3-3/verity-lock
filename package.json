@@ -1,5 +1,5 @@
 {
-  "name": "sp3-lock",
+  "name": "verity-lock",
   "private": true,
   "version": "0.1.0",
   "type": "module",

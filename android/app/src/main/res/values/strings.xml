@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">SP3 Lock</string>
-    <string name="title_activity_main">SP3 Lock</string>
-    <string name="package_name">dev.sp3.lock</string>
-    <string name="custom_url_scheme">dev.sp3.lock</string>
+    <string name="app_name">Verity Lock</string>
+    <string name="title_activity_main">Verity Lock</string>
+    <string name="package_name">dev.verity.lock</string>
+    <string name="custom_url_scheme">dev.verity.lock</string>
 </resources>

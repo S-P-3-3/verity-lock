@@ -1,4 +1,4 @@
-//! sp3 Lock — portable, offline, AES-256-GCM encrypted vault (account-number login).
+//! Verity Lock — portable, offline, AES-256-GCM encrypted vault (account-number login).
 
 mod commands;
 mod crypto;

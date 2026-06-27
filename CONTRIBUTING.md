@@ -1,12 +1,12 @@
-# Contributing to sp3 Lock
+# Contributing to Verity Lock
 
 Pull Requests sind willkommen!
 
 ## Setup
 
 ```bash
-git clone https://github.com/sp3dev/sp3-lock.git
-cd sp3-lock
+git clone https://github.com/S-P-3-3/verity-lock.git
+cd verity-lock
 npm install
 npm run tauri dev        # Desktop (Tauri)
 ```

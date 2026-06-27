@@ -1,4 +1,4 @@
-package dev.sp3.lock;
+package dev.verity.lock;
 
 import android.os.Bundle;
 import android.view.WindowManager;

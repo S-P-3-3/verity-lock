@@ -2,7 +2,7 @@
 
 ## Modell
 
-sp3 Lock ist **100 % offline**. Es gibt keinen Server, keinen Account und keine
+Verity Lock ist **100 % offline**. Es gibt keinen Server, keinen Account und keine
 Netzwerkverbindung (Android: keine `INTERNET`-Berechtigung; Desktop: CSP
 `connect-src 'none'`).
 

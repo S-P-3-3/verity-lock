@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "sp3 Lock",
+  "productName": "Verity Lock",
   "version": "1.0.0",
-  "identifier": "com.sp3.lock",
+  "identifier": "com.verity.lock",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "sp3 Lock",
+        "title": "Verity Lock",
         "width": 420,
         "height": 820,
         "minWidth": 380,
@@ -30,10 +30,10 @@
   "bundle": {
     "active": true,
     "targets": ["nsis", "deb", "appimage"],
-    "copyright": "© 2026 sp3 — GPL-3.0",
+    "copyright": "© 2026 Verity — GPL-3.0",
     "category": "Utility",
     "shortDescription": "Offline password manager",
-    "longDescription": "sp3 Lock is a 100% offline, portable password manager with military-grade AES-256-GCM encryption. No account required — just a 16-digit access number.",
+    "longDescription": "Verity Lock is a 100% offline, portable password manager with military-grade AES-256-GCM encryption. No account required — just a 16-digit access number.",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",

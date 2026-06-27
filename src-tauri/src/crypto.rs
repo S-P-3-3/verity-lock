@@ -1,4 +1,4 @@
-//! Cryptographic primitives for sp3 Passwortmanager.
+//! Cryptographic primitives for Verity Lock Passwortmanager.
 //!
 //! Key derivation: Argon2id (memory 64 MiB, time 3, parallelism 4) -> 256-bit key.
 //! Encryption: AES-256-GCM (authenticated, integrity is provided by the GCM tag).

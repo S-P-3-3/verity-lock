@@ -100,14 +100,14 @@ export async function confirmDialog(message: string, title = "Bestätigen"): Pro
 export async function pickVaultToOpen(): Promise<string | null> {
   if (!isTauri) return null;
   const { open } = await import("@tauri-apps/plugin-dialog");
-  const sel = await open({ multiple: false, filters: [{ name: "sp3 Vault", extensions: ["sp3vault"] }] });
+  const sel = await open({ multiple: false, filters: [{ name: "Verity Vault", extensions: ["sp3vault"] }] });
   return typeof sel === "string" ? sel : null;
 }
 
 export async function pickVaultToCreate(): Promise<string | null> {
   if (!isTauri) return "vault.sp3vault"; // mobile: fixed name in app storage
   const { save } = await import("@tauri-apps/plugin-dialog");
-  const sel = await save({ defaultPath: "vault.sp3vault", filters: [{ name: "sp3 Vault", extensions: ["sp3vault"] }] });
+  const sel = await save({ defaultPath: "vault.sp3vault", filters: [{ name: "Verity Vault", extensions: ["sp3vault"] }] });
   return typeof sel === "string" ? sel : null;
 }
 

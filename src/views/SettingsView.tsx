@@ -64,7 +64,7 @@ export function SettingsView({ sessionToken, settings, onChange }: Props) {
       );
       if (!ok) return;
     }
-    const dest = await pickExportDest(`sp3-export.${format}`, format);
+    const dest = await pickExportDest(`verity-export.${format}`, format);
     if (!dest) return;
     try {
       await api.exportVault(sessionToken, format, dest);
@@ -263,7 +263,7 @@ export function SettingsView({ sessionToken, settings, onChange }: Props) {
       <SettingsSection title="Über" icon="ℹ️">
         <SettingsRow label="Version" value="1.0.0" />
         <SettingsRow label="Lizenz" value="GPL-3.0" />
-        <SettingsRow label="GitHub" chevron onClick={() => copyLink("https://github.com/sp3dev/sp3-lock")} />
+        <SettingsRow label="GitHub" chevron onClick={() => copyLink("https://github.com/S-P-3-3/verity-lock")} />
         <SettingsRow label="Discord" chevron onClick={() => copyLink("https://discord.gg/sp3")} />
         <SettingsRow label="Verschlüsselung" value={platform.isDesktop ? "Argon2id" : "PBKDF2"} />
       </SettingsSection>

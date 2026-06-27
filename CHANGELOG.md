@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to sp3 Lock are documented here.
+All notable changes to Verity Lock are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [1.0.0] — 2026-06-14

@@ -35,7 +35,7 @@ export function Topbar({ onBack, title, rightIcon, onRight, onSettings, onUser }
   return (
     <header className="topbar">
       <div className="logo-badge">s3</div>
-      <span className="app-name">sp3 Lock</span>
+      <span className="app-name">Verity Lock</span>
       <div className="spacer" />
       {onUser && (
         <button className="top-icon" onClick={onUser} title="Konto">

@@ -1,10 +1,10 @@
 ================================================================
-  sp3 Lock  —  portabel · 100% offline · militärisch verschlüsselt
+  Verity Lock  —  portabel · 100% offline · militärisch verschlüsselt
 ================================================================
 
 KURZANLEITUNG
 -------------
-1. Lege "sp3-lock.exe" in einen Ordner (z. B. auf den USB-Stick).
+1. Lege "verity-lock.exe" in einen Ordner (z. B. auf den USB-Stick).
    Eine Installation ist NICHT nötig.
 
 2. Starte die .exe per Doppelklick.
@@ -31,7 +31,7 @@ SICHERHEIT
 
 DATEIEN
 -------
-  sp3-lock.exe        Hauptprogramm
+  verity-lock.exe        Hauptprogramm
   vault.sp3vault      verschlüsselte Vault (wird angelegt)
   settings.json       Einstellungen (nichts Sensibles)
   vault.sp3vault.bak  automatisches Backup (falls vorhanden)
@@ -43,5 +43,5 @@ Sichere "vault.sp3vault" regelmäßig (oder via Einstellungen ->
 Vault-Backup). Ohne diese Datei sind die Passwörter verloren.
 
 ================================================================
-sp3 Lock — Open Source (GPL-3.0) · Tauri 2 + Rust + React
+Verity Lock — Open Source (GPL-3.0) · Tauri 2 + Rust + React
 ================================================================
