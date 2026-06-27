@@ -411,6 +411,67 @@ fn exe_dir() -> Result<PathBuf, String> {
         .ok_or_else(|| "cannot resolve exe directory".into())
 }
 
+/// True if a probe file can be created (and removed) inside `dir`.
+fn dir_is_writable(dir: &Path) -> bool {
+    let probe = dir.join(".verity_write_test");
+    match fs::write(&probe, b"") {
+        Ok(_) => {
+            let _ = fs::remove_file(&probe);
+            true
+        }
+        Err(_) => false,
+    }
+}
+
+/// Per-user, always-writable data directory for the vault. Used when the
+/// executable lives in a read-only location (installed .deb/AppImage in
+/// /usr/bin, /opt, …) where writing next to the binary fails with os error 13.
+fn user_data_dir() -> Result<PathBuf, String> {
+    #[cfg(target_os = "windows")]
+    {
+        if let Ok(appdata) = std::env::var("APPDATA") {
+            if !appdata.is_empty() {
+                return Ok(PathBuf::from(appdata).join("Verity Lock"));
+            }
+        }
+    }
+    #[cfg(target_os = "macos")]
+    {
+        if let Ok(home) = std::env::var("HOME") {
+            if !home.is_empty() {
+                return Ok(PathBuf::from(home).join("Library/Application Support/Verity Lock"));
+            }
+        }
+    }
+    #[cfg(all(unix, not(target_os = "macos")))]
+    {
+        if let Ok(xdg) = std::env::var("XDG_DATA_HOME") {
+            if !xdg.is_empty() {
+                return Ok(PathBuf::from(xdg).join("verity-lock"));
+            }
+        }
+        if let Ok(home) = std::env::var("HOME") {
+            if !home.is_empty() {
+                return Ok(PathBuf::from(home).join(".local/share/verity-lock"));
+            }
+        }
+    }
+    Err("cannot resolve a writable data directory".into())
+}
+
+/// Directory the default vault should live in: the executable's own folder when
+/// it is writable (true portable mode), otherwise a per-user data directory.
+fn vault_base_dir() -> Result<PathBuf, String> {
+    if let Ok(exe) = exe_dir() {
+        if dir_is_writable(&exe) {
+            return Ok(exe);
+        }
+    }
+    let data = user_data_dir()?;
+    fs::create_dir_all(&data).map_err(|e| format!("create data dir: {e}"))?;
+    Ok(data)
+}
+
 fn now_secs() -> u64 {
     SystemTime::now()
         .duration_since(UNIX_EPOCH)
@@ -510,10 +571,13 @@ fn lock_clear(path: &str) -> Result<(), String> {
     write_settings_file(&serde_json::Value::Object(root))
 }
 
-/// Default portable vault path: `vault.sp3vault` next to the executable.
+/// Default vault path: `vault.sp3vault` next to the executable when that folder
+/// is writable (portable mode), otherwise inside a per-user data directory.
+/// This avoids "os error 13" (permission denied) for installed Linux packages
+/// whose binary sits in a read-only location like /usr/bin.
 #[tauri::command]
 pub async fn default_vault_path() -> Result<String, String> {
-    Ok(exe_dir()?
+    Ok(vault_base_dir()?
         .join("vault.sp3vault")
         .to_string_lossy()
         .to_string())

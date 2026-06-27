@@ -3224,27 +3224,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "verity-lock"
-version = "1.0.0"
-dependencies = [
- "aes-gcm",
- "argon2",
- "base64 0.22.1",
- "csv",
- "quick-xml 0.36.2",
- "rand",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tauri-plugin-clipboard-manager",
- "tauri-plugin-dialog",
- "time",
- "uuid",
- "zeroize",
-]
-
-[[package]]
 name = "stable_deref_trait"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4192,6 +4171,27 @@ dependencies = [
  "js-sys",
  "serde_core",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "verity-lock"
+version = "1.0.0"
+dependencies = [
+ "aes-gcm",
+ "argon2",
+ "base64 0.22.1",
+ "csv",
+ "quick-xml 0.36.2",
+ "rand",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tauri-plugin-clipboard-manager",
+ "tauri-plugin-dialog",
+ "time",
+ "uuid",
+ "zeroize",
 ]
 
 [[package]]
